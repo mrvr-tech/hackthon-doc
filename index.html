@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BuildTri is a CLI-first building platform where manual, AI-first, and hybrid workflows meet."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>BuildTri — Build beyond the prompt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero" id="home">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="assets/videos/intro%20video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <header class="site-header">
+          <nav class="navigation" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="BuildTri home">
+              <span class="brand-mark brand-logo-crop" aria-hidden="true"></span>
+              <span class="brand-wordmark">BUILD<span class="brand-tri">TRI</span></span>
+            </a>
+            <button
+              class="menu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-navigation"
+              aria-label="Open menu"
+            >
+              <span></span><span></span>
+            </button>
+            <div class="nav-links" id="primary-navigation">
+              <a href="#studio">Products <span class="nav-chevron" aria-hidden="true">⌄</span></a>
+              <a href="#use-cases">Use Cases <span class="nav-chevron" aria-hidden="true">⌄</span></a>
+              <a href="#workflow">Modes</a>
+              <a href="#features">For Teams</a>
+              <a href="#problem">Resources <span class="nav-chevron" aria-hidden="true">⌄</span></a>
+              <span class="nav-actions">
+                <a class="nav-icon-link" href="#contact" aria-label="Discover BuildTri">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.8 13.9 9l6.3 2-6.3 2-1.9 6.2L10.1 13l-6.3-2 6.3-2L12 2.8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m19.1 15.5.8 2.2 2.1.8-2.1.7-.8 2.2-.7-2.2-2.2-.7 2.2-.8.7-2.2Z" fill="currentColor"/></svg>
+                </a>
+                <a class="nav-cta" href="#studio">Try BuildTri <span aria-hidden="true">↗</span></a>
+              </span>
+            </div>
+          </nav>
+        </header>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot"></span> A CLI-FIRST BUILDING PLATFORM</p>
+            <h1 aria-label="From your idea to something real.">From your idea<br />to <span id="typewriter-text" aria-hidden="true">something real.</span><span class="typewriter-caret" aria-hidden="true"></span></h1>
+            <p class="hero-description">
+              Your next big idea deserves more than a blank screen. Start by hand, build with AI, or bring both together—with BuildTri.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#studio">Start building <span aria-hidden="true">↗</span></a>
+              <button class="button button-glass video-preview-trigger" type="button" aria-haspopup="dialog" aria-controls="intro-preview">
+                <span class="hero-play" aria-hidden="true">▶</span> Watch intro
+              </button>
+            </div>
+            <div class="hero-mode-picker">
+              <span class="hero-mode-caption">CHOOSE HOW YOU BUILD</span>
+              <div class="hero-mode-tabs" role="group" aria-label="Choose a BuildTri coding mode">
+                <button class="mode-button" type="button" data-mode="vibe" aria-pressed="false"><span class="mode-dot mode-violet"></span> Vibe Coding</button>
+                <button class="mode-button is-active" type="button" data-mode="hybrid" aria-pressed="true"><span class="mode-dot mode-cyan"></span> Hybrid Coding</button>
+                <button class="mode-button" type="button" data-mode="manual" aria-pressed="false"><span class="mode-dot mode-blue"></span> Manual Coding</button>
+              </div>
+              <span class="hero-mode-current">Selected: <strong id="hero-mode-name">Hybrid Coding</strong></span>
+            </div>
+          </div>
+        </div>
+        <a href="#studio" class="scroll-cue"><span></span> EXPLORE THE WORKSPACE</a>
+      </section>
+
+      <dialog class="video-dialog" id="intro-preview" aria-labelledby="video-dialog-title">
+        <div class="video-dialog-header">
+          <div><p class="section-tag"><span>BUILDTRI</span></p><h2 id="video-dialog-title">A closer look at the build.</h2></div>
+          <button class="video-dialog-close" type="button" aria-label="Close video preview">×</button>
+        </div>
+        <video class="intro-preview-video" controls playsinline preload="metadata">
+          <source src="assets/videos/intro%20video.mp4" type="video/mp4" />
+          Your browser does not support embedded video.
+        </video>
+        <p class="video-dialog-status" aria-live="polite"></p>
+      </dialog>
+
+      <section class="studio-section section-shell" aria-labelledby="studio-heading">
+        <div class="section-intro">
+          <p class="section-tag"><span>01</span> YOUR BUILDTRI WORKSPACE</p>
+          <h2 id="studio-heading">Three modes.<br /><span>One project.</span></h2>
+          <p class="section-description">Switch between manual, AI-first, and hybrid workflows in this interactive CLI preview.</p>
+        </div>
+        <div class="studio-wrap" id="studio">
+          <div class="studio-window">
+            <div class="studio-topbar">
+              <div class="window-controls" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="workspace-name"><span class="workspace-glyph">B</span> buildtri / campus-app <span class="saved-status">workspace</span></div>
+              <span class="terminal-status"><span></span> LOCAL</span>
+            </div>
+            <div class="studio-body">
+              <aside class="studio-sidebar">
+                <div class="sidebar-heading"><span>EXPLORER</span><button type="button" aria-label="Project options">···</button></div>
+                <div class="project-item is-selected"><span class="project-symbol">⌄</span><span>campus-app</span></div>
+                <div class="recent-project"><span class="file-symbol file-violet">TS</span> src</div>
+                <div class="recent-project file-child"><span class="file-symbol file-orange">TS</span> app.ts</div>
+                <div class="recent-project file-child"><span class="file-symbol file-green">TS</span> routes.ts</div>
+                <div class="recent-project"><span class="file-symbol file-yellow">◇</span> package.json</div>
+                <div class="recent-project"><span class="file-symbol file-cyan">MD</span> README.md</div>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-caption">ACTIVE MODE</div>
+                <div class="active-mode-label"><span class="mode-dot mode-cyan"></span><span id="workspace-mode">Hybrid</span> Coding</div>
+                <div class="sidebar-bottom"><span class="avatar">BT</span><span><b>BuildTri CLI</b><small>Workspace preview</small></span></div>
+              </aside>
+              <div class="preview-area">
+                <div class="preview-toolbar">
+                  <span class="preview-tab is-active"><span class="tab-dot"></span> app.ts</span>
+                  <span class="preview-tab">Terminal</span>
+                  <span class="preview-address"><span>⌘</span> buildtri dev</span>
+                </div>
+                <div class="code-editor" aria-label="Example TypeScript editor">
+                  <div class="code-gutter" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span></div>
+                  <pre class="code-content"><code><span class="code-comment">// a project built your way</span>
+<span class="code-keyword">import</span> { createApp } <span class="code-keyword">from</span> <span class="code-string">"@buildtri/core"</span>;
+
+<span class="code-keyword">const</span> app = <span class="code-keyword">await</span> createApp({
+  name: <span class="code-string">"campus-app"</span>,
+  workflow: <span class="code-string" id="code-mode">"hybrid"</span>,
+});
+
+app.<span class="code-function">route</span>(<span class="code-string">"/projects"</span>, projects);
+<span class="code-keyword">export default</span> app;</code></pre>
+                  <div class="terminal-panel">
+                    <div class="terminal-heading"><span>TERMINAL</span><span class="terminal-live"><i></i> READY</span></div>
+                    <div class="terminal-output" id="terminal-output" aria-live="polite">
+                      <p class="terminal-command"><span class="terminal-prompt">❯</span> buildtri dev --mode hybrid</p>
+                      <p class="terminal-info">BuildTri workspace ready <span>·</span> Human-guided AI build</p>
+                      <p class="terminal-info">Project checks <span class="terminal-pass">✓ 4 passed</span> <span>·</span> <span class="terminal-muted">0 warnings</span></p>
+                    </div>
+                    <div class="terminal-cursor" aria-hidden="true"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form class="prompt-bar" id="idea-form">
+              <span class="prompt-spark" aria-hidden="true">❯</span>
+              <label class="visually-hidden" for="idea-prompt">Try a BuildTri CLI command</label>
+              <input id="idea-prompt" type="text" maxlength="70" placeholder="Try a command, e.g. buildtri check" />
+              <span class="prompt-hint">↵</span>
+              <button class="prompt-submit" type="submit">Run demo <span aria-hidden="true">↑</span></button>
+            </form>
+            <p class="demo-note" id="demo-note" aria-live="polite"><span></span> INTERACTIVE UI PREVIEW · COMMANDS ARE NOT EXECUTED</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="problem-section section-shell" id="problem">
+        <div class="problem-copy">
+          <p class="section-tag"><span>02</span> THE PROBLEM</p>
+          <h2>Big ideas. A hard first step.</h2>
+          <p>Students have ideas and ambition, but no clear place to begin. In a class of 60, learners bring different questions, confidence levels, and ways of working. Farmers, shopkeepers, and creators need useful tools too—yet coding can feel like a locked door.</p>
+          <blockquote>“I have an idea. I just don’t know how to build it.”</blockquote>
+        </div>
+        <div class="problem-visual" aria-hidden="true">
+          <div class="lock-grid"></div><div class="lock-code">&lt;/&gt;</div>
+          <div class="lock-chain chain-one"></div><div class="lock-chain chain-two"></div>
+          <div class="lock-body"><span class="lock-keyhole"></span><span>NO CLEAR WAY IN</span></div>
+          <span class="problem-caption">THE FIRST STEP SHOULDN’T BE A BARRIER</span>
+        </div>
+        <div class="consequence-bar">
+          <strong>WHEN THE GAP STAYS OPEN</strong>
+          <span><i>01</i> Students give up</span><span><i>02</i> Teachers get stretched</span>
+          <span><i>03</i> People pay for simple tools</span><span><i>04</i> Ideas stay ideas</span>
+        </div>
+      </section>
+
+      <section class="gap-section section-shell" id="gap">
+        <div class="gap-copy">
+          <p class="section-tag"><span>03</span> THE GAP</p>
+          <h2>From <span>“I have an idea”</span><br />to <span>“I built it.”</span></h2>
+          <p>BuildTri brings three ways of working into one CLI-first platform. Choose how much you want to write, how much you want AI to draft, and where you want to work together.</p>
+          <div class="gap-callout"><span class="status-dot"></span> ONE PROJECT. THREE WAYS FORWARD.</div>
+        </div>
+        <div class="gap-visual">
+          <div class="gap-endpoint"><span class="gap-endpoint-icon">01</span><strong>I HAVE<br />AN IDEA</strong><small>START HERE</small></div>
+          <div class="gap-bridge"><div class="bridge-lines"></div><div class="bridge-modes"><span>MANUAL</span><span>VIBE</span><span>HYBRID</span></div><i></i><small>PLAN · BUILD · CHECK · SHIP</small></div>
+          <div class="gap-endpoint endpoint-done"><span class="gap-endpoint-icon">02</span><strong>I BUILT<br />IT</strong><small>YOUR NEXT STEP</small></div>
+        </div>
+      </section>
+
+      <section class="use-cases-section section-shell" id="use-cases">
+        <div class="section-intro">
+          <p class="section-tag"><span>04</span> BUILT FOR THE PEOPLE WITH THE IDEAS</p>
+          <h2>Different starting points.<br /><span>Room to build.</span></h2>
+          <p class="section-description">A CLI-first workflow for the classroom, the hackathon, the first prototype, and the next big idea.</p>
+        </div>
+        <div class="use-case-grid">
+          <article class="use-case-card"><span class="use-case-icon">⌘</span><div><span class="case-number">01 / COLLEGE STUDENT</span><h3>Turn a final-year idea into a project.</h3><p>Start in Vibe mode, shape the generated app in Hybrid, and keep building skills as you go.</p></div><span class="case-mode">VIBE → HYBRID</span></article>
+          <article class="use-case-card"><span class="use-case-icon">▤</span><div><span class="case-number">02 / TEACHER</span><h3>Make room for every learner.</h3><p>Guide a classroom project from shared steps to individual progress, even when students need different support.</p></div><span class="case-mode">CLASSROOM</span></article>
+          <article class="use-case-card"><span class="use-case-icon">◇</span><div><span class="case-number">03 / HACKATHON TEAM</span><h3>Build together against the clock.</h3><p>Split the work across frontend, backend, and review—then bring it back into one project.</p></div><span class="case-mode">ALL THREE MODES</span></article>
+          <article class="use-case-card"><span class="use-case-icon">⌂</span><div><span class="case-number">04 / FARMER OR SMALL BUSINESS</span><h3>Shape a tool around a real need.</h3><p>Describe a local problem, explore a first solution, and refine the workflow with a human in the loop.</p></div><span class="case-mode">IDEA → PROTOTYPE</span></article>
+          <article class="use-case-card"><span class="use-case-icon">⌁</span><div><span class="case-number">05 / SELF-LEARNER</span><h3>Learn by making something real.</h3><p>Move from guided AI drafts to manual changes as your confidence and understanding grow.</p></div><span class="case-mode">VIBE → MANUAL</span></article>
+          <article class="use-case-card"><span class="use-case-icon">↗</span><div><span class="case-number">06 / STARTUP FOUNDER</span><h3>Explore an MVP before you scale.</h3><p>Get a prototype moving, inspect the important decisions, and prepare the next iteration with your team.</p></div><span class="case-mode">HYBRID</span></article>
+          <article class="use-case-card"><span class="use-case-icon">▣</span><div><span class="case-number">07 / SCHOOL</span><h3>Bring a project-based module to class.</h3><p>Help students progress from planning and wireframes through building, testing, and sharing.</p></div><span class="case-mode">LEARN BY BUILDING</span></article>
+          <article class="use-case-card"><span class="use-case-icon">◎</span><div><span class="case-number">08 / NGO OR CIVIC TEAM</span><h3>Prototype around a community problem.</h3><p>Start with the people affected, shape a small digital tool, and iterate with their feedback.</p></div><span class="case-mode">HUMAN-LED</span></article>
+        </div>
+        <div class="use-case-summary"><strong>ONE PLATFORM. MANY STARTING POINTS.</strong><span>Student · Teacher · Builder · Founder · Community</span><a href="#studio">Explore the CLI demo <span aria-hidden="true">↗</span></a></div>
+      </section>
+
+      <section class="workflow-section section-shell" id="workflow">
+        <div class="section-intro">
+          <p class="section-tag"><span>05</span> ONE PROJECT, THREE MODES</p>
+          <h2>Choose your way to <span>build.</span></h2>
+          <p class="section-description">Start where you are. Bring AI into the process when it helps. Keep ownership of the work.</p>
+        </div>
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <span class="card-number">01 / MANUAL MODE</span>
+            <div class="workflow-art art-prompt" aria-hidden="true"><span class="prompt-art-spark">01</span><div class="art-line">You write. You decide. You understand.</div><span class="art-cursor"></span></div>
+            <h3>Every line, yours.</h3>
+            <p>Work directly in code with full control over how your project takes shape.</p>
+          </article>
+          <article class="workflow-card">
+            <span class="card-number">02 / VIBE MODE</span>
+            <div class="workflow-art art-layout" aria-hidden="true"><div class="layout-side"></div><div class="layout-main"><span></span><i></i><b></b><small></small></div><div class="layout-glow"></div></div>
+            <h3>Get from thought to draft.</h3>
+            <p>Use natural-language prompts to explore an idea and get a first version moving.</p>
+          </article>
+          <article class="workflow-card">
+            <span class="card-number">03 / HYBRID MODE</span>
+            <div class="workflow-art art-launch" aria-hidden="true"><div class="launch-ring ring-back"></div><div class="launch-ring ring-front"></div><span class="launch-arrow">↗</span><span class="launch-label">READY WHEN YOU ARE</span></div>
+            <h3>AI assists. You stay in charge.</h3>
+            <p>Combine generated drafts with human decisions, manual edits, and review.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="features-section section-shell" id="features">
+        <div class="features-panel">
+          <div class="features-copy">
+            <p class="section-tag"><span>06</span> THE BUILDTRI WORKFLOW</p>
+            <h2>Work in the CLI.<br /><span>Keep the context.</span></h2>
+            <p>Move between writing code, exploring an idea with AI, and reviewing the result without losing sight of your project.</p>
+            <a href="#studio" class="feature-link">Try the interactive demo <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="feature-list">
+            <article class="feature-item"><span class="feature-icon icon-focus">⌘</span><div><h3>A command-line home for your project</h3><p>Keep your project and your build workflow close to the terminal.</p></div><span class="feature-arrow">↗</span></article>
+            <article class="feature-item"><span class="feature-icon icon-craft">⌁</span><div><h3>Three modes, one build</h3><p>Move between Manual, Vibe, and Hybrid ways of working.</p></div><span class="feature-arrow">↗</span></article>
+            <article class="feature-item"><span class="feature-icon icon-ownership">✓</span><div><h3>Build with understanding</h3><p>Use AI as part of your process while staying engaged with the decisions and code.</p></div><span class="feature-arrow">↗</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-section" id="contact">
+        <div class="closing-orb" aria-hidden="true"></div>
+        <p class="section-tag"><span>YOUR IDEA. YOUR WAY.</span></p>
+        <h2>Start with an idea.<br /><span>Choose how you build.</span></h2>
+        <a class="button button-primary" href="#studio">Explore the BuildTri demo <span aria-hidden="true">↗</span></a>
+        <p class="closing-note">Interactive interface preview. CLI commands are not executed.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#home"><span class="brand-mark brand-logo-crop" aria-hidden="true"></span><span class="brand-wordmark">BUILD<span class="brand-tri">TRI</span></span></a>
+      <span class="footer-caption">Manual · Vibe · Hybrid</span>
+      <a class="back-to-top" href="#home">BACK TO TOP <span aria-hidden="true">↑</span></a>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
